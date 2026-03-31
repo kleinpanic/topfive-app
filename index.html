@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Top Five Platform</title>
+    <style>
+        * { box-sizing: border-box; }
+        body { font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', sans-serif; max-width: 600px; margin: 0 auto; padding: 20px; background: linear-gradient(135deg, #667eea 0%, #764ba2 100%); min-height: 100vh; }
+        .card { background: white; padding: 24px; border-radius: 16px; box-shadow: 0 4px 20px rgba(0,0,0,0.15); margin-bottom: 20px; }
+        .card h2 { margin: 0 0 16px 0; color: #1a1a2e; font-size: 24px; }
+        .form-group { margin-bottom: 14px; }
+        label { display: block; font-weight: 600; margin-bottom: 6px; font-size: 14px; color: #444; }
+        input[type="text"] { width: 100%; padding: 12px 14px; border: 2px solid #e0e0e0; border-radius: 10px; font-size: 15px; transition: border-color 0.2s; }
+        input[type="text"]:focus { outline: none; border-color: #667eea; }
+        button { background: linear-gradient(135deg, #667eea 0%, #764ba2 100%); color: white; border: none; padding: 14px; border-radius: 10px; cursor: pointer; width: 100%; font-weight: 700; font-size: 16px; }
+        button:hover { transform: translateY(-1px); box-shadow: 0 4px 12px rgba(102,126,234,0.4); }
+        .feed-title { color: white; text-shadow: 0 2px 4px rgba(0,0,0,0.2); margin: 24px 0 16px; font-size: 22px; }
+        .post { background: white; padding: 20px; border-radius: 12px; box-shadow: 0 2px 12px rgba(0,0,0,0.1); margin-bottom: 16px; animation: slideIn 0.3s ease; }
+        @keyframes slideIn { from { opacity: 0; transform: translateY(-10px); } to { opacity: 1; transform: translateY(0); } }
+        .post h3 { margin: 0 0 12px 0; color: #667eea; font-size: 18px; }
+        .post ol { margin: 0; padding-left: 24px; color: #333; }
+        .post li { padding: 6px 0; border-bottom: 1px solid #f0f0f0; }
+        .post li:last-child { border-bottom: none; }
+        .empty-state { text-align: center; color: rgba(255,255,255,0.8); padding: 40px; font-size: 16px; }
+    </style>
+</head>
+<body>
+    <div class="card">
+        <h2>🎯 Create a Top Five</h2>
+        <div class="form-group">
+            <label for="category">Category</label>
+            <input type="text" id="category" placeholder="Movies, Foods, Albums, Places...">
+        </div>
+        <div class="form-group"><label>#1 🥇</label><input type="text" id="item1" placeholder="The best"></div>
+        <div class="form-group"><label>#2 🥈</label><input type="text" id="item2" placeholder="Second best"></div>
+        <div class="form-group"><label>#3 🥉</label><input type="text" id="item3" placeholder="Third place"></div>
+        <div class="form-group"><label>#4</label><input type="text" id="item4" placeholder="Fourth pick"></div>
+        <div class="form-group"><label>#5</label><input type="text" id="item5" placeholder="Fifth pick"></div>
+        <button onclick="createPost()">Post My Top 5 🚀</button>
+    </div>
+    <h2 class="feed-title">📰 Feed</h2>
+    <div id="feed"><div class="empty-state">No posts yet. Create your first Top Five!</div></div>
+    <script>
+        function createPost() {
+            const category = document.getElementById('category').value.trim();
+            const items = [1,2,3,4,5].map(i => document.getElementById('item'+i).value.trim());
+            if (!category || items.some(item => !item)) { alert("Fill out the category and all 5 items!"); return; }
+            const post = document.createElement('div');
+            post.className = 'post';
+            post.innerHTML = `<h3>Top 5: ${category}</h3><ol>${items.map(i => `<li>${i}</li>`).join('')}</ol>`;
+            const feed = document.getElementById('feed');
+            const empty = feed.querySelector('.empty-state');
+            if (empty) empty.remove();
+            feed.prepend(post);
+            document.getElementById('category').value = '';
+            [1,2,3,4,5].forEach(i => document.getElementById('item'+i).value = '');
+        }
+    </script>
+</body>
+</html>
