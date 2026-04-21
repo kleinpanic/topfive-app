@@ -1,47 +1,39 @@
-# Top Five Platform
+# topfive-app — CS 3704 Monorepo
 
-A simple single-page web application for creating and sharing "Top Five" lists.
+**Team:** Collin Schaufele and Will
 
-## About
+This repository is a monorepo for CS 3704 (Intermediate Software Design and Engineering) class work. It contains multiple subprojects organized by date and topic.
 
-This project was created for **CS3704: Intermediate Software Design and Engineering** at Virginia Tech as part of an assignment titled **"AI Writing Code"** — a demo and test of AI coding capabilities.
+## Subprojects
 
-### Assignment Context
+### `2026-04-21-topfive-actions/` — GitHub Actions CI/CD Fork
+**Assignment:** Fork the Top Five sample app, add a GitHub Actions workflow, make 4+ changes.
 
-The goal was to demonstrate how AI assistants can rapidly generate functional software from natural language prompts. This app was built in minutes using AI-assisted development, showcasing:
+Forked from: `https://github.com/CS3704-VT/top_five`
 
-- Rapid prototyping from concept to deployment
-- Single-page application architecture
-- Clean, modern UI design
-- Immediate deployment to GitHub Pages
+Key changes:
+- Added `.github/workflows/ci.yml` — runs pytest and Flask smoke test on every push/PR
+- Added `EXPERIENCE.md` — prior CI/CD and software engineering experience
+- Added `tests/test_app.py` — 14 unit test cases (AI-assisted: Claude)
+- Modernized `templates/index.html` — card-based UI, gradient header, responsive design (AI-assisted)
+- Team names added to `README.md`: Collin Schaufele and Will
 
-## Features
+To run locally:
+```bash
+cd 2026-04-21-topfive-actions
+pip install -r requirements.txt
+python app.py
+```
 
-- 🎯 Create custom "Top Five" lists for any category
-- 📱 Responsive design works on mobile and desktop
-- ⚡ Instant visual feedback with animations
-- 🔗 Shareable public URL via GitHub Pages
+To run tests:
+```bash
+cd 2026-04-21-topfive-actions
+pytest tests/ -v
+```
 
-## Live Demo
+### `original/` — Original Top Five Starter Files
+The original 3-file starter project (index.html, LICENSE, README.md) as it was at the beginning of the assignment. Kept for reference.
 
-**https://kleinpanic.github.io/topfive-app/**
+## Attendance
 
-## Tech Stack
-
-- Pure HTML5, CSS3, JavaScript (no frameworks)
-- GitHub Pages for static hosting
-- AI-assisted code generation
-
-## How to Use
-
-1. Enter a category (e.g., "Movies", "Foods", "Albums")
-2. Fill in your top 5 items
-3. Click "Post My Top 5" to see it appear in the feed
-
-## License
-
-MIT License - feel free to use and modify.
-
----
-
-*Generated with AI assistance for CS3704*
+Class attendance records and related materials can be found in the `attendance/` directory (if present).
