@@ -31,7 +31,7 @@ cd 2026-04-21-topfive-actions
 pytest tests/ -v
 ```
 
-### `original/` — Original Top Five Starter Files
+### `jan-original-topfive/` — Original Top Five Starter Files
 The original 3-file starter project (index.html, LICENSE, README.md) as it was at the beginning of the assignment. Kept for reference.
 
 ## Attendance
