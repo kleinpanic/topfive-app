@@ -1,6 +1,6 @@
 # topfive-app — CS 3704 Monorepo
 
-**Team:** Collin Schaufele and Will
+**Team:** Collin Schaufele and William Martin
 
 This repository is a monorepo for CS 3704 (Intermediate Software Design and Engineering) class work. It contains multiple subprojects organized by date and topic.
 
@@ -16,7 +16,7 @@ Key changes:
 - Added `EXPERIENCE.md` — prior CI/CD and software engineering experience
 - Added `tests/test_app.py` — 14 unit test cases (AI-assisted: Claude)
 - Modernized `templates/index.html` — card-based UI, gradient header, responsive design (AI-assisted)
-- Team names added to `README.md`: Collin Schaufele and Will
+- Team names added to `README.md`: Collin Schaufele and William Martin
 
 To run locally:
 ```bash

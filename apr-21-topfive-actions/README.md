@@ -1,6 +1,6 @@
 # Top Five
 
-**Team:** Collin Schaufele and Will
+**Team:** Collin Schaufele and William Martin
 
 This is a preliminary version of a social media platform called Top Five. The primary function of this website is for users to create posts listing their top five favorite items for a specific category.
 
@@ -19,7 +19,7 @@ For class, please complete the following activity (you may work individually or 
 
 This fork includes the following four required modifications:
 
-1. **Team names added to README** — Collin Schaufele and Will (this file)
+1. **Team names added to README** — Collin Schaufele and William Martin (this file)
 2. **Prior CI/CD experience file** — See `EXPERIENCE.md` for full details on our background with CI/CD, GitHub Actions, Python packaging, and GPU cluster infrastructure
 3. **GitHub Actions CI workflow** — See `.github/workflows/ci.yml` — runs pytest and Flask smoke test on every push and PR
 4. **Unit tests** — See `tests/test_app.py` — 13 test cases covering routes, form validation, and submission display (AI-assisted: Claude helped structure test patterns)

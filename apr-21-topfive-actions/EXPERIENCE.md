@@ -1,6 +1,6 @@
 # Prior CI/CD Experience
 
-**Team:** Collin Schaufele and Will
+**Team:** Collin Schaufele and William Martin
 
 ## Relevant Background
 
